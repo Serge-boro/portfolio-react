@@ -3,12 +3,10 @@ import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
 import { styles } from '../styles'
-import { BallCanvas, EarthCanvas } from './canvas'
+import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 import { useContextProvider } from '../useContext/UseContext'
-import { footers } from '../constants'
-import Footer from './Footer'
 
 const Contact = () => {
   const { isMobile, checkMobile } = useContextProvider()
@@ -67,7 +65,9 @@ const Contact = () => {
         variants={slideIn('left', 'tween', 0.2, 1)}
       >
         <p className={styles.heroSubText}>Get in touch</p>
-        <h3 className={styles.heroHeadText}>Contact.</h3>
+        <h3 className={`${styles.heroHeadText} flex`}>
+          Contact <p className='ml-3 text-[#a1ff5e]'>.</p>
+        </h3>
 
         <form
           ref={formRef}

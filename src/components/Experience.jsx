@@ -55,10 +55,8 @@ const Experience = () => {
         <p className={`${styles.sectionSubText} ${isMobile && 'text-[14px]'}`}>
           What I have done so far
         </p>
-        <h2
-          className={`${styles.sectionHeadText} ${isMobile && 'text-[18px]'}`}
-        >
-          Work Experience
+        <h2 className={`${styles.sectionHeadText} flex `}>
+          Work Experience <p className='ml-3 text-[#5ea9ff]'>.</p>
         </h2>
       </motion.nav>
       <div className='mt-20 flex flex-col'>

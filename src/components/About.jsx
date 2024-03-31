@@ -27,8 +27,8 @@ const ServiceCard = ({ title, icon, idx, isMobile }) => {
             className={`w-16 h-16 object-contain ${isMobile && 'w-12'}`}
           />
           <h3
-            className={`text-white text-[20px] fon ${
-              isMobile && 'text-[15px]'
+            className={`text-white text-[16px] text-center ${
+              isMobile && 'text-[12px]'
             }`}
           >
             {title}
@@ -47,19 +47,30 @@ const About = () => {
         <p className={`${styles.sectionSubText} ${isMobile && 'text-[14px]'}`}>
           Intraduction
         </p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+
+        <h2 className={`${styles.sectionHeadText} flex `}>
+          Overview<p className='ml-3 text-[#915eff]'>.</p>
+        </h2>
       </motion.nav>
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className={`mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] ${
-          isMobile && 'text-[12.5px]'
+          isMobile && 'text-[14px]'
         }`}
       >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim aut
-        impedit error dignissimos, tempore atque. Officia minus excepturi
-        voluptates veniam qui harum dolorem numquam incidunt ipsum eligendi
-        tempora corporis vel sint porro laborum, voluptatum maiores expedita
-        optio nemo nostrum delectus.
+        &nbsp; Experienced in all phases of SDLS and SQA with a record of
+        delivering on time and on budget. Results-oriented and customer
+        success-driven. I have a strong work ethic and take a pragmatic approach
+        to getting the job done while improving the process. <br />
+        &nbsp; Over 5 years of hands-on experience in Quality Assurance, mainly
+        focused on the development of both, the front and back-end of the
+        multi-tier distributed web-centric and client/server-based applications.{' '}
+        <br />
+        &nbsp; More than 7 years of experience in application development,
+        product life cycle experience from the concept and design to the
+        shipment, involvement in triage and disposition of all bugs reported
+        against their environments, and developing and implementing various
+        QA-related documentation.
       </motion.p>
       <div
         className={`mt-20 flex flex-wrap gap-10 justify-evenly items-center ${

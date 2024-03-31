@@ -7,17 +7,13 @@ const Tech = () => {
   const { isMobile, checkMobile } = useContextProvider()
   console.log(checkMobile)
   return (
-    <>
-      {!checkMobile && (
-        <div className='flex flex-row flex-wrap justify-center gap-10'>
-          {technologies.map((tech, idx) => (
-            <div className={`w-28 h-28`} key={idx}>
-              <BallCanvas icon={tech.icon} />
-            </div>
-          ))}
+    <div className='flex flex-row flex-wrap justify-center gap-10'>
+      {technologies.map((tech, idx) => (
+        <div className={`w-28 h-28 ${isMobile && 'w-14 h-14'}`} key={idx}>
+          <BallCanvas icon={tech.icon} />
         </div>
-      )}
-    </>
+      ))}
+    </div>
   )
 }
 

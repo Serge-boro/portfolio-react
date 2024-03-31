@@ -80,10 +80,9 @@ const Works = () => {
         <p className={`${styles.sectionSubText} ${isMobile && 'text-[14px]'}`}>
           My work
         </p>
-        <h2
-          className={`${styles.sectionHeadText} ${isMobile && 'text-[18px]'}`}
-        >
-          Personal projects
+
+        <h2 className={`${styles.sectionHeadText} flex`}>
+          Personal projects<p className='ml-3 text-[#ff765e]'>.</p>
         </h2>
       </motion.nav>
       <div className='w-full flex'>

@@ -9,7 +9,6 @@ import {
 } from '@react-three/drei'
 
 import CanvasLoader from '../Loader'
-import { useContextProvider } from '../../useContext/UseContext'
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl])

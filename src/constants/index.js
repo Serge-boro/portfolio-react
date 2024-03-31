@@ -44,19 +44,20 @@ const services = [
     icon: mobile,
   },
   {
-    title: 'Backend Developer',
+    title:
+      'Good interpersonal skills; can communicate complex concepts in simple terms',
     icon: backend,
   },
   {
-    title: 'Content Creator',
+    title: 'Adept in creating complex projects from scratch',
     icon: creator,
   },
   {
-    title: 'Backend Developer1',
+    title: 'Self-motivated; fast learner; hardworking',
     icon: backend,
   },
   {
-    title: 'Content Creator2',
+    title: 'Developing custom software solutions for client businesses',
     icon: creator,
   },
 ]
