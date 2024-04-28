@@ -241,7 +241,7 @@ const projects = [
         color: 'blue-text-gradient',
       },
       {
-        name: 'css',
+        name: 'CSS',
         color: 'green-text-gradient',
       },
       {
@@ -254,35 +254,52 @@ const projects = [
     project_link: 'https://russianstepbystep.com/',
   },
   {
-    name: 'Individual full-stack project',
+    name: 'MERN full-stack project',
     description:
-      'Web application with a nice responsive UI design and backend for it, deploying to a Netlify platform with set up AIRTABLE database.',
+      "For demonstration, I've created cookie dependency to reach individual product items. You get an option to stay and follow the app as a guest or please be free to make a simple register and sign in to check all the possibilities of the app. It is a MERN full-stack project with JWT, bcrypt library, schemas for MongoDB on the back end, and interceptors on the front end. For the demo, I put a 180-second expiration time for the cookie with navigation back to the login page.",
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
+        name: 'Node.js',
         color: 'pink-text-gradient',
       },
       {
-        name: 'Netlify ',
+        name: 'MongoDB',
         color: 'blue-text-gradient',
       },
       {
-        name: 'AIRTABLE ',
+        name: 'JWT ',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'bcrypt',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'interceptors',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'CSS',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'REST API',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'NETLIFY ',
         color: 'green-text-gradient',
       },
     ],
     image: ResPr,
-    source_code_link:
-      'https://github.com/Serge-boro/PROJECT_REACT_NETLIFY_AIRTABLE/tree/main',
-    project_link: 'https://project-react-netlify-airtable-base.netlify.app',
+    source_code_link_second:
+      'https://github.com/Serge-boro/comfy-store-service',
+    source_code_link: 'https://github.com/Serge-boro/comfy-store-client',
+    project_link: 'https://react-node-express-jwt-mongodb.netlify.app',
   },
   {
     name: 'Individual web application project',
@@ -298,7 +315,7 @@ const projects = [
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'CSS',
         color: 'pink-text-gradient',
       },
       {
@@ -328,7 +345,7 @@ const projects = [
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'CSS',
         color: 'pink-text-gradient',
       },
       {
@@ -366,7 +383,7 @@ const projects = [
         color: 'blue-text-gradient',
       },
       {
-        name: 'css',
+        name: 'CSS',
         color: 'green-text-gradient',
       },
     ],

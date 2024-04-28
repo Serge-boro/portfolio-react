@@ -14,6 +14,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  source_code_link_second,
   project_link,
   isMobile,
 }) => {
@@ -35,6 +36,18 @@ const ProjectCard = ({
               <div
                 className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1'
                 onClick={() => window.open(source_code_link, '_blank')}
+              >
+                <img
+                  src='https://static-00.iconduck.com/assets.00/logo-github-icon-256x256-6fb8e1xp.png'
+                  alt='github'
+                  className='w-10 h-10 rounded-full object-cover bg-white'
+                />
+              </div>
+            )}
+            {source_code_link_second && (
+              <div
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1'
+                onClick={() => window.open(source_code_link_second, '_blank')}
               >
                 <img
                   src='https://static-00.iconduck.com/assets.00/logo-github-icon-256x256-6fb8e1xp.png'
