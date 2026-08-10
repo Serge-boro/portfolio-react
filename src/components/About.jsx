@@ -45,7 +45,7 @@ const About = () => {
     <>
       <motion.nav variants={textVariant()}>
         <p className={`${styles.sectionSubText} ${isMobile && "text-[14px]"}`}>
-          Intraduction
+          Introduction
         </p>
 
         <h2 className={`${styles.sectionHeadText} flex `}>
