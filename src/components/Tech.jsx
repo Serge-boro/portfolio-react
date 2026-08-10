@@ -1,19 +1,36 @@
 import { SectionWrapper } from "../hoc";
-import { BallCanvas } from "./canvas";
-import { technologies } from "../constants";
 import { useContextProvider } from "../useContext/UseContext";
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "../styles";
+import { technologies } from "../constants";
 
 const Tech = () => {
   const { isMobile, checkMobile } = useContextProvider();
-  console.log(checkMobile);
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
-      {technologies.map((tech, idx) => (
-        <div className={`w-28 h-28 ${isMobile && "w-14 h-14"}`} key={idx}>
-          {/* <BallCanvas icon={tech.icon} /> */}
+    <>
+      <motion.nav variants={textVariant()}>
+        <h2 className={`${styles.sectionHeadText} flex`}>
+          Technical Skills<p className="ml-3 text-[#5A189A]">.</p>
+        </h2>
+      </motion.nav>
+      <div className="w-full flex">
+        <div
+          variants={fadeIn("", "", 0.1, 1)}
+          className="text-secondary text-[17px] max-w-5xl leading-[30px]"
+        >
+          {technologies.map(({ title, description }) => {
+            return (
+              <>
+                <p>
+                  <b>{title}</b>: {description}
+                </p>
+              </>
+            );
+          })}
         </div>
-      ))}
-    </div>
+      </div>
+    </>
   );
 };
 
