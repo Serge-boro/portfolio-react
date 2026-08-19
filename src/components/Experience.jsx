@@ -52,14 +52,23 @@ const Experience = () => {
   const { isMobile } = useContextProvider();
   return (
     <>
-      <motion.nav variants={textVariant()}>
-        <p className={`${styles.sectionSubText} ${isMobile && "text-[14px]"}`}>
-          What I have done so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} flex `}>
-          Work Experience <p className="ml-3 text-[#5ea9ff]">.</p>
-        </h2>
-      </motion.nav>
+      {!isMobile ? (
+        <motion.nav variants={textVariant()}>
+          <p className={`${styles.sectionSubText}`}>What I have done so far</p>
+          <h2 className={`${styles.sectionHeadText} flex `}>
+            Work Experience <p className="ml-3 text-[#5ea9ff]">.</p>
+          </h2>
+        </motion.nav>
+      ) : (
+        <nav>
+          <p className={`${styles.sectionSubText} text-[14px]`}>
+            What I have done so far
+          </p>
+          <h2 className={`${styles.sectionHeadText} flex `}>
+            Work Experience <p className="ml-3 text-[#5ea9ff]">.</p>
+          </h2>
+        </nav>
+      )}
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((exp, idx) => {

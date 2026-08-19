@@ -16,22 +16,14 @@ const FeedbacksCard = ({
   link,
   isMobile,
 }) => {
-  return (
+  return !isMobile ? (
     <motion.div
       variants={fadeIn("", "spring", idx * 0.5, 0.75)}
-      className={`bg-black-200 p-10 rounded-3xl sm:w-[320px] w-full ${
-        isMobile && "mt-[-70px]"
-      }`}
+      className={`bg-black-200 p-10 rounded-3xl sm:w-[320px] w-full`}
     >
       <p className="text-white font-black text-[48px]">"</p>
       <div className="mt-1">
-        <p
-          className={`text-white tracking-wider text-[18px] ${
-            isMobile && "text-[13px]"
-          }`}
-        >
-          {testimonial}
-        </p>
+        <p className={`text-white tracking-wider text-[18px]`}>{testimonial}</p>
         <div className="mt-7 flex justify-between items-center gap-1">
           <div className="flex-1 flex flex-col">
             <p className="text-white font-medium text-[16px]">
@@ -51,6 +43,32 @@ const FeedbacksCard = ({
         </div>
       </div>
     </motion.div>
+  ) : (
+    <div
+      className={`bg-black-200 p-10 rounded-3xl sm:w-[320px] w-full mt-[-70px]`}
+    >
+      <p className="text-white font-black text-[32px]">"</p>
+      <div className="mt-1">
+        <p className={`text-white tracking-wider text-[13px]`}>{testimonial}</p>
+        <div className="mt-7 flex justify-between items-center gap-1">
+          <div className="flex-1 flex flex-col">
+            <p className="text-white font-medium text-[16px]">
+              <span>@</span> {name}
+            </p>
+            <p className="mt-1 text-secondary text-[13px]">
+              {designation} of {company}
+            </p>
+          </div>
+          <a href={link} target="_blank">
+            <img
+              src={image}
+              alt={`feetback-by-${name}`}
+              className="w-10 h-10 rounded-full object-cover"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -61,12 +79,21 @@ const Feedbacks = () => {
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
       >
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others said</p>
-          <h2 className={`${styles.sectionHeadText} flex`}>
-            Testimonials <p className="ml-3 text-[#df5eff]">.</p>
-          </h2>
-        </motion.div>
+        {!isMobile ? (
+          <motion.div variants={textVariant()}>
+            <p className={styles.sectionSubText}>What others said</p>
+            <h2 className={`${styles.sectionHeadText} flex`}>
+              Testimonials <p className="ml-3 text-[#df5eff]">.</p>
+            </h2>
+          </motion.div>
+        ) : (
+          <div>
+            <p className={styles.sectionSubText}>What others said</p>
+            <h2 className={`${styles.sectionHeadText} flex`}>
+              Testimonials <p className="ml-3 text-[#df5eff]">.</p>
+            </h2>
+          </div>
+        )}
       </div>
       <div className={`${styles.paddingX} -mt-20 pd-14 flex flex-wrap gap-7`}>
         {testimonials.map((testimon, idx) => (
